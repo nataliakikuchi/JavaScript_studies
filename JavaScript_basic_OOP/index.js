@@ -17,4 +17,8 @@ const amountWithdrawn = bankAccountClient1.toWithdraw(400);
 console.log(amountWithdrawn);
 console.log(bankAccountClient1);
 
-//npm init inicia um arquivo package.json
+//NPM - Node Package Manager é um gerenciador de pacotes JS
+
+//npm init inicia um arquivo package.json, que guarda informações de configuração e dados da aplicação. Organiza pacotes e bibliotecas através dos gerenciadores de pacote.
+
+//Os scripts do package.json servem para criarmos comandos para rodar o projeto, por exemplo: "scripts: { "start": "node index.js"}, desse modo podemos chamar apenas npm start
