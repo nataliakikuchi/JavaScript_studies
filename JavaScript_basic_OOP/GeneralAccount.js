@@ -1,11 +1,14 @@
+//classes criadas sem o intuito de serem instanciadas, são classes abstratas.
+
 export class GeneralAccount {
     constructor(bankAccountBalance, client, bankAgency) {
+        if(this.constructor == GeneralAccount) {
+            throw new Error("Não devemos instanciar um objeto do tipo Conta.");
+        }
+        
         this._bankAccountBalance = bankAccountBalance;
         this._client = client;
         this._bankAgency = bankAgency;
-        if(this.constructor == GeneralAccount) {
-            console.log("Não devemos instanciar um objeto do tipo conta.");
-        }
     }
     
     set client(newValue) {
