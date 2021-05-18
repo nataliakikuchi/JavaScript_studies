@@ -1,50 +1,21 @@
-import { Client } from "./Client.js"
+import { GeneralAccount } from "./GeneralAccount.js";
 
-export class BankAccount {
-    // bankAgency;
-    // _client;
-
-    // // #bankAccountBalance = 0;
+export class BankAccount extends GeneralAccount {
+    
+    // #bankAccountBalance = 0;
     // _bankAccountBalance = 0;
 
-    constructor(bankAgency, client, bankAccountBalance, quantityOfAccounts) {
-        this.bankAgency = bankAgency;
-        this.client = client;
-        this._bankAccountBalance = 0;
-        this.quantityOfAccounts += 1;
+    static quantityOfAccounts = 0;
+
+    constructor(client, bankAgency) {
+        super(0, client, bankAgency); 
+        BankAccount.quantityOfAccounts += 1;
     }
 
-    get bankAccountBalance() {
-        return this._bankAccountBalance;
-    }
-
-    set client(newValue) {
-        if (newValue instanceof Client) {
-            this._client = newValue;
-        }
-    }
-
-    get client() {
-        return this._client;
-    }
-
-    toWithdraw(value) {
-        if (this._bankAccountBalance >= value) {
-            this._bankAccountBalance -= value;
-        }
-        return value;
-    }
-
-    toDeposit(value) {
-        if (value <= 0) {
-            return;
-        }
-        this._bankAccountBalance += value;
-    }
-
-    toTransfer(value, bankAccount) { //value é um tipo de valor, cópia (tipo primitivo) e bankAccount é um tipo de referência (informação direta, todas as altrerações são refletidas no objeto original)
-        const amountWithdrawn = this.toWithdraw(value);
-        bankAccount.toDeposit(amountWithdrawn);
+    //esse método sobrescreve o comportamento do método toWithdrawn da classe mãe
+      toWithdraw(value) {
+        let tax = 1.1;
+       return this._toWithdrawn(value, tax);
     }
 }
 
