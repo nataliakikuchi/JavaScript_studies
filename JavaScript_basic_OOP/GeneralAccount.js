@@ -3,9 +3,9 @@
 export class GeneralAccount {
     constructor(bankAccountBalance, client, bankAgency) {
         if(this.constructor == GeneralAccount) {
-            throw new Error("Não devemos instanciar um objeto do tipo Conta.");
+            throw new Error("Não devemos instanciar um objeto do tipo Conta, pois essa é uma classe abstrata.");
         }
-        
+
         this._bankAccountBalance = bankAccountBalance;
         this._client = client;
         this._bankAgency = bankAgency;
@@ -25,10 +25,9 @@ export class GeneralAccount {
         return this._bankAccountBalance;
     }
 
+    //método abstrato
     toWithdraw(value) { //value é um tipo de valor, cópia (tipo primitivo) e bankAccount é um tipo de referência (informação direta, todas as altrerações são refletidas no objeto original)
-        let tax = 1;
-        return this._toWithdrawn(value, tax);
-      
+        throw new Error("O método toWithdrawn da classe GeneralAccount é abstrato. Precisa ser sobrescrito para ser utilizado.")
     }
 
     _toWithdrawn(value, tax) {
