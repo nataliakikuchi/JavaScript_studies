@@ -10,5 +10,8 @@ O primeiro curso, ["JavaScript: primeiros passos com a linguagem"](https://www.a
 
 O segundo curso, ["JavaScript: programando a Orientação a Objetos"](https://www.alura.com.br/curso-online-javascritpt-orientacao-objetos), teve carga horária de 10 horas e foi lecionado pelo instrutor Rafael Bugan Debs.
 
+### JavaScript: Interfaces e Herança em Orientação a Objetos
+
+O terceiro curso, ["JavaScript: Interfaces e Herança em Orientação a Objetos"](https://www.alura.com.br/curso-online-javascript-polimorfismo), teve carga horária de 12 horas e também foi lecionado pelo instrutor Rafael Bugan Debs.
 
 
