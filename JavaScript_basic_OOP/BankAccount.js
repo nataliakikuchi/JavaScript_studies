@@ -12,10 +12,10 @@ export class BankAccount extends GeneralAccount {
         BankAccount.quantityOfAccounts += 1;
     }
 
-    //esse método sobrescreve o comportamento do método toWithdrawn da classe mãe
+    //esse método sobrescreve o comportamento do método toWithdraw da classe mãe
       toWithdraw(value) {
         let tax = 1.1;
-       return this._toWithdrawn(value, tax);
+       return this._toWithdraw(value, tax);
     }
 }
 

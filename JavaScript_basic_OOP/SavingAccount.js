@@ -5,9 +5,9 @@ export class SavingAccount extends GeneralAccount {
         super(openingBalance, client, bankAgency);
     }
 
-      //esse método sobrescreve o comportamento do método toWithdrawn da classe mãe
+      //esse método sobrescreve o comportamento do método toWithdraw da classe mãe
       toWithdraw(value) {
         let tax = 1.02;
-       return this._toWithdrawn(value, tax);
+       return this._toWithdraw(value, tax);
     }
 }

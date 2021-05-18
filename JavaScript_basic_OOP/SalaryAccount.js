@@ -7,6 +7,6 @@ export class SalaryAccount extends GeneralAccount {
 
 			toWithdraw(value) {
 				let tax = 1.01;
-				return this._toWithdrawn();
+				return this._toWithdraw();
     }
 }

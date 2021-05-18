@@ -27,10 +27,10 @@ export class GeneralAccount {
 
     //método abstrato
     toWithdraw(value) { //value é um tipo de valor, cópia (tipo primitivo) e bankAccount é um tipo de referência (informação direta, todas as altrerações são refletidas no objeto original)
-        throw new Error("O método toWithdrawn da classe GeneralAccount é abstrato. Precisa ser sobrescrito para ser utilizado.")
+        throw new Error("O método toWithdraw da classe GeneralAccount é abstrato. Precisa ser sobrescrito para ser utilizado.")
     }
 
-    _toWithdrawn(value, tax) {
+    _toWithdraw(value, tax) {
         const amountWithdrawn = tax * value;
 
         if (this._bankAccountBalance >= amountWithdrawn) {
