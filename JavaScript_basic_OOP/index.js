@@ -21,9 +21,17 @@ const director = new Director("Nat", 2000000, 1234987654);
 director.registerPassword("123");
 
 const manager = new Manager("Caio", 2000000, 12345098765);
+manager.registerPassword("123");
 
-const isLogged = AuthSystem.login(director, "123");
-console.log(isLogged);
+const isDirectorLogged = AuthSystem.login(director, "123");
+const isManagerLogged = AuthSystem.login(manager, "123");
+
+console.log(isDirectorLogged);
+console.log(isManagerLogged);
+
+const client2 = new Client("Camila", 12345678900, "333");
+const isClientLogged = AuthSystem.login(client2, "333");
+console.log(isClientLogged);
 
 
 //NPM - Node Package Manager é um gerenciador de pacotes JS

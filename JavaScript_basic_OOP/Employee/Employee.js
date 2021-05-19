@@ -8,8 +8,8 @@ export class Employee {
 				this._password;
     }
 
-		get password() {
-			return this._password;
+		authentic(password) {
+			return password == this._password;
 		}
 
 		registerPassword(password) {
