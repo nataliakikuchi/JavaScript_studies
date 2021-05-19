@@ -1,6 +1,9 @@
 import { Client } from "./Client.js"
 import { BankAccount } from "./Account/BankAccount.js"
 import { SavingAccount } from "./Account/SavingAccount.js"
+import { Manager } from "./Employee/Manager.js"
+import { Director } from "./Employee/Director.js"
+import { AuthSystem } from "./AuthSystem.js"
 
 const client1 = new Client("Natalia", 12345678);
 
@@ -11,9 +14,16 @@ bankAccountClient1.toWithdraw(80);
 const savingAccount = new SavingAccount(100, client1, 1001);
 savingAccount.toWithdraw(50);
 
-console.log(bankAccountClient1);
-console.log(savingAccount);
+// console.log(bankAccountClient1);
+// console.log(savingAccount);
 
+const director = new Director("Nat", 2000000, 1234987654);
+director.registerPassword("123");
+
+const manager = new Manager("Caio", 2000000, 12345098765);
+
+const isLogged = AuthSystem.login(director, "123");
+console.log(isLogged);
 
 
 //NPM - Node Package Manager é um gerenciador de pacotes JS
