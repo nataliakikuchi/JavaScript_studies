@@ -19,4 +19,4 @@ export class BankAccount extends GeneralAccount {
     }
 }
 
-//Criamos um atributo cliente nessa classe para associar uma conta a uma cliente, já que é possível utilizar classes como atributo de outras classes e, assim, compor objetos mais complexos e relaciondos.
+//Criamos um atributo cliente nessa classe para associar uma conta a uma cliente, já que é possível utilizar classes como atributo de outras classes e, assim, compor objetos mais complexos e relacionados.
